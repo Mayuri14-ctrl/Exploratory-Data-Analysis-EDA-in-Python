@@ -11,49 +11,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 ```
-## Loading Dataset
-```
-df = pd.read_csv("your_dataset.csv")
-df.head()
-```
-## 4. Checking for Missing Values
-```
-df.isnull().sum()
-# Display only columns with missing values
-missing_columns = missing_values[missing_values > 0]
-print(missing_columns)
-```
-## 5. Handling for Missing Values
-```
-# Convert blank values to NaN
-df.replace('', np.nan, inplace=True)
-
-# Convert all possible columns to numeric (forcing errors='coerce' converts non-convertible values to NaN)
-df = df.apply(pd.to_numeric, errors='coerce')
-
-# Fill NaN values with 0
-df.fillna(0, inplace=True)
-```
-## 6. Feature Encoding
-
-```
-df['category'] = df['category'].astype('category').cat.codes
-
-```
-##7 # Exploratory-Data-Analysis-EDA-in-Python
-Perform basic operations on data using Python
-
-## 1. Introduction
-Exploratory Data Analysis (EDA) is a crucial step in understanding the dataset before building models. It helps in discovering patterns, detecting outliers, and summarizing key characteristics of the data.
-
-## 2. Importing Libraries
-```python
-import pandas as pd
-import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-```
-## Loading Dataset
+## 3. Loading Dataset
 ```
 df = pd.read_csv("your_dataset.csv")
 df.head()
